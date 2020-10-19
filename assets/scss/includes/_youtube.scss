@@ -1,0 +1,131 @@
+#youtube {
+  background: linear-gradient(to top left, $yt-red 50%, $dark 50%);
+
+  grid-template-columns: 200px 1fr 1fr 200px;
+  grid-template-rows: 200px 1fr 200px;
+
+  .heading {
+    color: $light;
+    grid-column: 2/4;
+
+    @media screen and (max-width: 768px) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+
+  h3 {
+    color: $light;
+    font-size: 38px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (max-width: 1366px) {
+      font-size: 28px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      font-size: 24px;
+    }
+  }
+
+  .description {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    width: 100%;
+    max-width: 640px;
+
+    justify-self: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    color: $light;
+    font-size: 24px;
+
+    a {
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 1366px) {
+      font-size: 22px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+
+  .latest-video {
+    grid-column: 3/4;
+
+    grid-row: 2/3;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    .thumbnail {
+      display: block;
+      width: 100%;
+      height: 270px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+
+  .channel {
+    grid-column: 1/5;
+    grid-row: 3/4;
+
+    .yt-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .yt-logo {
+        font-size: 120px;
+        color: $light;
+      }
+
+      p {
+        color: $light;
+        font-size: 24px;
+        margin-left: 25px;
+
+        @media screen and (max-width: 1366px) {
+          font-size: 22px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 125px 1fr 1fr 125px;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  @media screen and (max-width: 640px) {
+    height: auto;
+  }
+}
